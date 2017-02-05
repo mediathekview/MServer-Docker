@@ -28,6 +28,8 @@ ln -s /etc/mserver ~/.mserver
 
 echo "Configs:"
 ls -l ~/.mserver
+cp /etc/mserver/mserver.xml /mserver
+
 
 echo "Start server:"
 /start.sh
