@@ -23,11 +23,11 @@ if [ -z "$AWS_SECRET_ACCESS_KEY" ]; then
 fi
 
 echo "Loading configs"
-aws s3 cp s3://${CONFIG_BUCKET_NAME} /etc/mserver --region eu-central-1
+aws s3 cp s3://${CONFIG_BUCKET_NAME} /etc/mserver --region eu-central-1 --recursive
 ln -s /etc/mserver ~/.mserver
 
 echo "Configs:"
-ls -l ~/.mserver
+ls -l /etc/mserver
 cp /etc/mserver/mserver.xml /mserver
 
 
